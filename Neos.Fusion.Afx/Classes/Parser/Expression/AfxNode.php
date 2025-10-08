@@ -44,7 +44,9 @@ class AfxNode
                     if ($lexer->isOpeningBrace()) {
                         $attributes[] = [
                             'type' => 'spread',
-                            'payload' => Spread::parse($lexer)
+                            'from' => $lexer->getCharacterPosition(),
+                            'payload' => Spread::parse($lexer),
+                            'to' => $lexer->getCharacterPosition()
                         ];
                     } else {
                         $attributes[] = [
