@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Neos\Neos\Tests\Behavior\Features\Bootstrap;
+
 /*
  * This file is part of the Neos.Neos package.
  *
@@ -13,6 +15,7 @@ declare(strict_types=1);
  */
 
 use Behat\Gherkin\Node\TableNode;
+use ExceptionsTrait;
 use Neos\ContentRepository\Core\Feature\WorkspaceCreation\Command\CreateRootWorkspace;
 use Neos\ContentRepository\Core\SharedModel\Exception\WorkspaceDoesNotExist;
 use Neos\ContentRepository\Core\SharedModel\Workspace\ContentStreamId;
